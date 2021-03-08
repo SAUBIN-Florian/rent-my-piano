@@ -12,7 +12,7 @@ class PianosController < ApplicationController
   end
 
   def create
-    @piano = Piano.new(params[:piano_params])
+    @piano = Piano.new(piano_params)
     @piano.save
     # Will raise ActiveModel::ForbiddenAttributesError
     redirect_to piano_path(@piano)
