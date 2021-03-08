@@ -1,0 +1,10 @@
+<%= form_for(@piano) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :price %>
+  <%= f.number_field :price %>
+  <%= f.label :brand %>
+  <%= f.text_field :brand %>
+
+  <%= f.submit %>
+<% end %>
