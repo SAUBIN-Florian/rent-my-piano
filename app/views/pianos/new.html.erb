@@ -1,4 +1,5 @@
-<%= form_for(@piano) do |f| %>
+<div class="container">
+<%= simple_form_for(@piano) do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
   <%= f.label :price %>
@@ -8,3 +9,4 @@
 
   <%= f.submit %>
 <% end %>
+</div>
