@@ -1,7 +1,9 @@
-<div class="container">
-<ul>
+<div class="index-container">
   <% @pianos.each do |piano| %>
-    <li><%= piano.name %></li>
+    <div class="card">
+      <h3> <%= link_to  piano.name, pianos_path %> </h3>
+      <p> Brand: <%= piano.brand %> </p>
+      <p> Price: <%= piano.price %>$ </p>
+    </div>
   <% end %>
-</ul>
 </div>
