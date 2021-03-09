@@ -15,11 +15,18 @@ class PianosController < ApplicationController
     @piano = Piano.new(piano_params)
     @piano.user = current_user
     if @piano.save
+<<<<<<< HEAD
       # Will raise ActiveModel::ForbiddenAttributesError
+=======
+>>>>>>> cbcc3903c038bbd899f94541127862d174d70305
       redirect_to piano_path(@piano)
     else
       render :new
     end
+<<<<<<< HEAD
+=======
+    # Will raise ActiveModel::ForbiddenAttributesError
+>>>>>>> cbcc3903c038bbd899f94541127862d174d70305
   end
 
   def edit
