@@ -12,5 +12,8 @@
 <%= link_to "Edit #{@piano.name}",
             edit_piano_path(@piano),
             method: :get %>
+
+<%= link_to "See others pianos" ,
+            pianos_path(@piano) %>
 </div>
 </div>
