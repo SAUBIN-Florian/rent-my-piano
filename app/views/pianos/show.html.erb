@@ -16,16 +16,9 @@
 </div>
 
 <div class="bookings-form">
-  <%= simple_form_for [@booking, @piano] do |f| %>
+  <%= simple_form_for [@piano, @booking] do |f| %>
     <%= f.input :status %>
     <%= f.submit "Add your booking" %>
   <% end %>
 </div>
 
-<div class="bookings-list">
-  <ul>
-    <% @bookings.each do |booking| %>
-      <li> <%= user.name %> - <%= booking.status %> </li>
-    <% end %>
-  </ul>
-</div>
