@@ -19,7 +19,6 @@ class PianosController < ApplicationController
     else
       render :new
     end
-    # Will raise ActiveModel::ForbiddenAttributesError
   end
 
   def edit
@@ -35,8 +34,11 @@ class PianosController < ApplicationController
 
   def destroy
     @piano = Piano.find(params[:id])
-    @piano.destroy
-    redirect_to pianos_path
+    if @piano.destroy
+      redirect_to pianos_path
+    else
+      render :show
+    end
   end
 
   private
