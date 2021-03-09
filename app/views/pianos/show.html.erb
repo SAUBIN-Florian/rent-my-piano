@@ -1,13 +1,16 @@
-<div class="container">
+<div class="show_container">
 <h2><%= @piano.name %></h2>
-<p><%= @piano.price %></p>
-<p><%= @piano.brand %></p>
-<<<<<<< HEAD
+<p><%= "Price : #{@piano.price} $" %></p>
+<p><%= "Brand : #{@piano.brand}" %></p>
 
+<div class="lien">
 <%= link_to "Delete #{@piano.name}",
             piano_path(@piano),
-            method: :destroy,
+            method: :delete,
             data: { confirm: "Are you sure?" } %>
-=======
+
+<%= link_to "Edit #{@piano.name}",
+            edit_piano_path(@piano),
+            method: :get %>
 </div>
->>>>>>> cbcc3903c038bbd899f94541127862d174d70305
+</div>
