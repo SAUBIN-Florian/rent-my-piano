@@ -17,38 +17,11 @@ body {
     }
 }
 
-
 h2 {
     font-weight: bold;
 }
 .lien {
     display: flex;
-    // flex-flow: column;
+    flex-flow: row;
+    justify-items: center;
 }
-
-.btn-ghost {
-    margin: 10px;
-    background-color: #f5f4f4;
-    border: 1px solid rgba(102, 14, 14, 0.404);
-    color: rgba(102, 14, 14, 0.404);
-    padding: 8px 24px;
-    width: 100px;
-    border-radius: 50px;
-    font-weight: bolder;
-    opacity: 0.6;
-    transition: opacity 0.3s ease;
-  }
-
-  .btn-ghost:hover {
-    opacity: 1;
-    color: rgba(187, 24, 24, 0.424);
-    border-color: rgba(187, 24, 24, 0.404);
-  }
-
-  font-weight: bold;
-}
-.lien {
-  display: flex;
-  justify-items:center;
-}
-
