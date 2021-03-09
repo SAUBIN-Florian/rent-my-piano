@@ -1,4 +1,11 @@
-<div class="videocontainer">
-  <h1 class="text-center">Book your piano and play !</h1>
-    <%= link_to "Watch our new pianos", pianos_path(@piano), class: "btn btn-primary" %>
+<div class="piano-container">
+
+  <video autoplay muted loop id="myVideo">
+    <source src="app/assets/images/piano.mp4" type="video/mp4">
+  </video>
+
+  <div class="home-text">
+    <h1 class="text-center">Book your piano and play !</h1>
+    <%= link_to "Watch our new pianos", pianos_path, class: "btn btn-primary" %>
+  </div>
 </div>
