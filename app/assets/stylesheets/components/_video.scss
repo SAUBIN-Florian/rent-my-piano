@@ -2,15 +2,16 @@
   position: relative;
   width: 100vw;
   height: calc(100vh - 80px);
-  background-color: black;
 }
 
 .video {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  height: calc(100vh - 80px);
   width: 100vw;
+  height: calc(100vh - 70px);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  object-fit: cover;
+  top: 0
 }
 
 .home-text {
@@ -18,10 +19,11 @@
   display: flex;
   flex-flow: column;
   left: 50vh;
-  top: 50vh;
+  top: 40vh;
   color: white;
   font-weight: bold;
   a {
     width: 200px;
+    margin-top: 15px;
   }
 }
