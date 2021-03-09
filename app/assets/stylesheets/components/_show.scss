@@ -1,6 +1,9 @@
+
 body {
     background-color: whitesmoke;
 }
+
+
 .show_container {
     border: 2px solid rgba(187, 24, 24, 0.424);
     margin-top: 100px;
@@ -41,3 +44,11 @@ h2 {
     color: rgba(187, 24, 24, 0.424);
     border-color: rgba(187, 24, 24, 0.404);
   }
+
+  font-weight: bold;
+}
+.lien {
+  display: flex;
+  justify-items:center;
+}
+
