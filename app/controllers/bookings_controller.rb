@@ -1,5 +1,4 @@
 class BookingsController < ApplicationController
-
   def new
     @booking = Booking.new
   end
@@ -32,7 +31,7 @@ class BookingsController < ApplicationController
   end
 
   private
-  
+
   def booking_params
     params.require(:booking).permit(:status)
   end

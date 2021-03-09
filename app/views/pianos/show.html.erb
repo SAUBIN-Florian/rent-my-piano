@@ -1,23 +1,31 @@
 <div class="show_container">
-<h2><%= @piano.name %></h2>
-<p><%= "Price : #{@piano.price} $" %></p>
-<p><%= "Brand : #{@piano.brand}" %></p>
+  <h2><%= @piano.name %></h2>
+  <p><%= "Price : #{@piano.price} $" %></p>
+  <p><%= "Brand : #{@piano.brand}" %></p>
 
-<div class="lien">
-<%= link_to "Delete #{@piano.name}",
-            piano_path(@piano),
-            method: :delete,
-            data: { confirm: "Are you sure?" } %>
+  <div class="lien">
+    <%= link_to "Delete #{@piano.name}",
+      piano_path(@piano),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %>
 
-<%= link_to "Edit #{@piano.name}",
-            edit_piano_path(@piano),
-            method: :get %>
-</div>
+    <%= link_to "Edit #{@piano.name}",
+      edit_piano_path(@piano),
+      method: :get %>
+  </div>
 </div>
 
 <div class="bookings-form">
-    <%= simple_form_for [@booking, @piano] do |f| %>
-        <%= f.input :status%>
-        <%= f.submit "Add your booking" %>
+  <%= simple_form_for [@booking, @piano] do |f| %>
+    <%= f.input :status %>
+    <%= f.submit "Add your booking" %>
+  <% end %>
+</div>
+
+<div class="bookings-list">
+  <ul>
+    <% @bookings.each do |booking| %>
+      <li> <%= user.name %> - <%= booking.status %> </li>
     <% end %>
+  </ul>
 </div>
