@@ -34,6 +34,7 @@ class PianosController < ApplicationController
 
   def destroy
     @piano = Piano.find(params[:id])
+    @piano.user = current_user
     if @piano.destroy
       redirect_to pianos_path
     else
@@ -46,5 +47,4 @@ class PianosController < ApplicationController
   def piano_params
     params.require(:piano).permit(:name, :price, :brand)
   end
-
 end
