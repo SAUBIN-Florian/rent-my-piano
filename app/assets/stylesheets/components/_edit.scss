@@ -1,13 +1,28 @@
 input[type="submit" i] {
-    margin: 10px;
-    background-color: #f5f4f4;
-    border: 1px solid #00303f;
-    color: #00303f;
-    padding: 8px 24px;
-    width: 150px;
-    border-radius: 10px;
-    font-weight: normal;
-    opacity: 0.6;
+    // margin: 20px;
+    // background-color: #f5f4f4;
+    // border: 1px solid #00303f;
+    // color: #00303f;
+    // padding: 8px 24px;
+    // width: 150px;
+    // border-radius: 10px;
+    // font-weight: normal;
+    // opacity: 0.6;
+    //
+
+    position: absolute;
+    top: 20;
+    left: 0;
+    right: 0;
+    bottom: 5px;
+    padding: 9px;
+    margin: 0 auto;
+    width: 120px;
+    height: 50px;
+    border: 1.5px solid #00303f;
+    border-radius: 8px;
+    background: #f5f4f4;
+    opacity: 0.4;
     transition: opacity 0.3s ease;
 }
 
@@ -17,6 +32,32 @@ input[type="submit" i]:hover {
     border-color: rgba(187, 24, 24, 0.404);
 }
 
+input {
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: -internal-light-dark(black, white);
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: auto;
+    background-color: #f5f4f4;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    margin: 0em;
+    // font-size: 400 13.3333px Arial;
+    padding: 2px 4px;
+    border-color: #00303f;
+    border-width: 1px;
+    border-style: inset;
+    border-color: #00303f;
+    border-image: initial;
+    border-radius: 2px;
+}
+
 .edit-container {
     position: absolute;
     top: 0;
@@ -24,14 +65,21 @@ input[type="submit" i]:hover {
     right: 0;
     bottom: 0;
     margin: auto;
-    width: 260px;
-    height: 260px;
-    border-radius: 5px;
+    width: 300px;
+    height: 310px;
+    border-radius: 8px;
 
-    box-shadow: 1px 1px 50px #000;
+    box-shadow: 1px 1px 8px #00303f;
 label {
     padding: 8px;
     color: #00303f;
-
 }
+}
+
+.words-container {
+    width: 200px;
+    margin: 0 auto;
+}
+body {
+    background: #eeeded;
 }
