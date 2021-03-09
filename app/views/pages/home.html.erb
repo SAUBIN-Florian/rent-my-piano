@@ -1,8 +1,5 @@
 <div class="piano-container">
-
-  <video autoplay muted loop id="myVideo">
-    <source src="app/assets/images/piano.mp4" type="video/mp4">
-  </video>
+  <%= video_tag 'piano.mp4', autoplay: true, muted: true, loop: true, class: 'video' %>
 
   <div class="home-text">
     <h1 class="text-center">Book your piano and play !</h1>

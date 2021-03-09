@@ -12,7 +12,7 @@
   <body>
     <div class="navbar">
       <%= link_to "", class: "navbar-brand" do %>
-      <%= image_tag "https://assets.stickpng.com/images/580b585b2edbce24c47b28a9.png" %>
+      <%= image_tag "piano.png" %>
 
       <ul class="ul-sign">
         <% if user_signed_in? %>
@@ -24,6 +24,9 @@
           </li>
           <li class="item">
             <%= link_to "Add your Piano", new_piano_path, class: "nav-link" %>
+          </li>
+          <li class="item">
+            <%= link_to "All our Piano", pianos_path, class: "nav-link" %>
           </li>
           <li class="item">
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %>
