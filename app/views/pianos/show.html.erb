@@ -14,3 +14,10 @@
             method: :get %>
 </div>
 </div>
+
+<div class="bookings-form">
+    <%= simple_form_for [@booking, @piano] do |f| %>
+        <%= f.input :status%>
+        <%= f.submit "Add your booking" %>
+    <% end %>
+</div>

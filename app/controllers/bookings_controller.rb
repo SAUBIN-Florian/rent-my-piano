@@ -6,6 +6,7 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
+    @piano = Piano.find(params[:piano_id])
     @booking.piano = @piano
     if @booking.save
       redirect_to piano_path(@piano)
