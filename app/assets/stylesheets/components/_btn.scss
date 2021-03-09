@@ -1,16 +1,28 @@
-.btn {
+a.btn.btn-primary {
     padding: 16px;
     border-radius: 16px;
     background-color: rgb(73, 71, 71);
+    border-color: white;
     &:hover {
       color: rgb(104, 25, 25);
     }
   }
-  
-  a.btn.btn-secondary {
-    padding: 8px;
-    display: flex;
-    justify-content: space-between;
-    background-color: beige;
-    width: 280px;
+
+.btn-ghost {
+  margin: 10px;
+  background-color: #f5f4f4;
+  border: 1px solid rgba(102, 14, 14, 0.404);
+  color: rgba(102, 14, 14, 0.404);
+  padding: 8px 24px;
+  width: 200px;
+  border-radius: 50px;
+  font-weight: bolder;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+
+  .btn-ghost:hover {
+    opacity: 1;
+    color: rgba(187, 24, 24, 0.424);
+    border-color: rgba(187, 24, 24, 0.404);
   }
+}
