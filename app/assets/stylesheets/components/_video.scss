@@ -1,0 +1,29 @@
+.piano-container {
+  position: relative;
+  width: 100vw;
+  height: calc(100vh - 80px);
+}
+
+.video {
+  width: 100vw;
+  height: calc(100vh - 70px);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  object-fit: cover;
+  top: 0
+}
+
+.home-text {
+  position: absolute;
+  display: flex;
+  flex-flow: column;
+  left: 40vh;
+  top: 30vh;
+  color: white;
+  font-weight: bold;
+  a {
+    width: 200px;
+    margin-top: 15px;
+  }
+}

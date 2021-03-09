@@ -11,8 +11,37 @@
 
   <body>
     <div class="navbar">
-      <%= render 'shared/navbar' %>
-      <%= render 'shared/flashes' %>
+      <%= link_to "", class: "navbar-brand" do %>
+      <%= image_tag "piano.png" %>
+
+      <ul class="ul-sign">
+        <% if user_signed_in? %>
+          <li class="item">
+            <%= link_to "", root_path, class: "nav-link" %>
+          </li>
+          <li class="item">
+            <%= link_to "Home", root_path, class: "nav-link" %>
+          </li>
+          <li class="item">
+            <%= link_to "Add your Piano", new_piano_path, class: "nav-link" %>
+          </li>
+          <li class="item">
+            <%= link_to "All our Piano", pianos_path, class: "nav-link" %>
+          </li>
+          <li class="item">
+            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %>
+          </li>
+        <% else %>
+          <li class="item">
+            <%= link_to "", new_user_session_path, class: "nav-link" %>
+          </li>
+          <li class="item">
+            <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+          </li>
+        <% end %>
+        </ul>
+        <% end %>
+        <%= render 'shared/flashes' %>
     </div>
     <%= yield %>
   </body>

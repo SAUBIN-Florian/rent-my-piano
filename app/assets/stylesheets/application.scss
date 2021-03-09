@@ -1,6 +1,17 @@
 @import "bootstrap/scss/bootstrap";
 @import "components/navbar";
-@import "home";
 @import "components/show";
 @import "components/index";
+@import "components/video";
+@import "components/edit";
+@import "components/btn";
+@import "components/new";
 
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    li{
+        list-style: none;
+    }
+}

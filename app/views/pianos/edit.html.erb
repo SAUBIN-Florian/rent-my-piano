@@ -1,12 +1,14 @@
-<div class="container">
+<div class="edit-container">
+
 <%= form_for(@piano) do |f| %>
+<div class="words-container">
   <%= f.label :name %>
   <%= f.text_field :name %>
   <%= f.label :price %>
   <%= f.number_field :price %>
   <%= f.label :brand %>
   <%= f.text_field :brand %>
-
-  <%= f.submit %>
+</div>
+  <div id="update-btn"><%= f.submit %></div>
 <% end %>
 </div>
