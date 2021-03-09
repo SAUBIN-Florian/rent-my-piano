@@ -4,16 +4,13 @@
 <p><%= "Brand : #{@piano.brand}" %></p>
 
 <div class="lien">
-<%= link_to "X",
-            piano_path(@piano), class:"btn btn-secondary",
-            method: :delete,
-            data: { confirm: "Are you sure?" } %>
 
-<%= link_to "Edit #{@piano.name}",
-            edit_piano_path(@piano), class:"btn btn-secondary",
-            method: :get %>
+<%= link_to "Delete", piano_path(@piano), method: :delete, class: "btn btn-ghost" %>
+<%= link_to "Edit", edit_piano_path(@piano), method: :get, class: "btn btn-ghost" %>
+
 
 <%= link_to "See others pianos",
             pianos_path(@piano), class:"btn btn-secondary" %>
+
 </div>
 </div>
