@@ -13,9 +13,13 @@ class PianosController < ApplicationController
 
   def create
     @piano = Piano.new(piano_params)
-    @piano.save
-    # Will raise ActiveModel::ForbiddenAttributesError
-    redirect_to piano_path(@piano)
+    @piano.user = current_user
+    if @piano.save
+      # Will raise ActiveModel::ForbiddenAttributesError
+      redirect_to piano_path(@piano)
+    else
+      render :new
+    end
   end
 
   def edit
@@ -40,5 +44,4 @@ class PianosController < ApplicationController
   def piano_params
     params.require(:piano).permit(:name, :price, :brand)
   end
-
 end

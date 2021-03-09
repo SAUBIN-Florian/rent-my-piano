@@ -1,3 +1,8 @@
 <h2><%= @piano.name %></h2>
 <p><%= @piano.price %></p>
 <p><%= @piano.brand %></p>
+
+<%= link_to "Delete #{@piano.name}",
+            piano_path(@piano),
+            method: :destroy,
+            data: { confirm: "Are you sure?" } %>
