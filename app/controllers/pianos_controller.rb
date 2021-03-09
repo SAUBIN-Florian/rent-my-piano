@@ -19,7 +19,6 @@ class PianosController < ApplicationController
     else
       render :new
     end
-    # Will raise ActiveModel::ForbiddenAttributesError
   end
 
   def edit
@@ -35,8 +34,12 @@ class PianosController < ApplicationController
 
   def destroy
     @piano = Piano.find(params[:id])
-    @piano.destroy
-    redirect_to pianos_path
+    @piano.user = current_user
+    if @piano.destroy
+      redirect_to pianos_path
+    else
+      render :show
+    end
   end
 
   private
@@ -44,5 +47,4 @@ class PianosController < ApplicationController
   def piano_params
     params.require(:piano).permit(:name, :price, :brand)
   end
-
 end
