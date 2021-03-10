@@ -1,12 +1,13 @@
 class BookingsController < ApplicationController
-
   def new
     @booking = Booking.new
   end
 
   def create
     @booking = Booking.new(booking_params)
-    @review.piano = @piano
+    @piano = Piano.find(params[:piano_id])
+    @booking.user = current_user
+    @booking.piano = @piano
     if @booking.save
       redirect_to piano_path(@piano)
     else
@@ -19,7 +20,7 @@ class BookingsController < ApplicationController
   end
 
   def update
-    @booking = Booking.find(params[:id])
+    @booking = Booking.find(booking_params)
     @booking.update(booking_params)
     redirect_to piano_path(@booking)
   end
@@ -31,9 +32,8 @@ class BookingsController < ApplicationController
   end
 
   private
-  
-  def booking_params
-    params.require(:booking).permit(:piano_id, :user_id, :status)
-  end
 
+  def booking_params
+    params.require(:booking).permit(:status)
+  end
 end

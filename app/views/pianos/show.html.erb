@@ -1,14 +1,31 @@
 <div class="show_container">
-<h2><%= @piano.name %></h2>
-<p><%= "Price : #{@piano.price} $" %></p>
-<p><%= "Brand : #{@piano.brand}" %></p>
+  <h2><%= @piano.name %></h2>
+  <p><%= "Price : #{@piano.price} $" %></p>
+  <p><%= "Brand : #{@piano.brand}" %></p>
 
+  <div class="lien">
+    <%= link_to "Delete #{@piano.name}",
+      piano_path(@piano),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %>
+
+    <%= link_to "Edit #{@piano.name}",
+      edit_piano_path(@piano),
+      method: :get %>
+  </div>
+  
 <div class="lien">
 
 <%= link_to "Delete", piano_path(@piano), method: :delete, class: "btn btn-ghost" %>
 <%= link_to "Edit", edit_piano_path(@piano), method: :get, class: "btn btn-ghost" %>
 <%= link_to "See other pianos", pianos_path(@piano), class:"btn btn-ghost" %>
 
+</div>
 
+<div class="bookings-form">
+  <%= simple_form_for [@piano, @booking] do |f| %>
+    <%= f.input :status %>
+    <%= f.submit "Add your booking" %>
+  <% end %>
 </div>
-</div>
+
