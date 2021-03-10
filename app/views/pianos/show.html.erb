@@ -19,8 +19,9 @@
 <%= link_to "Delete", piano_path(@piano), method: :delete, class: "btn btn-ghost" %>
 <%= link_to "Edit", edit_piano_path(@piano), method: :get, class: "btn btn-ghost" %>
 <%= link_to "See other pianos", pianos_path(@piano), class:"btn btn-ghost" %>
-
 </div>
+
+<%= cl_image_tag @piano.photo.key, height: 300, width: 400, crop: :fill %>
 
 <div class="bookings-form">
   <%= simple_form_for [@piano, @booking] do |f| %>

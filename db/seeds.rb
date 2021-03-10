@@ -8,8 +8,12 @@
 
 
 puts "Cleaning DB"
+ActiveStorage::Attachment.all.find_each do |a|
+    a.purge
+end
+ActiveStorage::Blob.all.find_each do |b|
+    b.purge
+end
 Piano.destroy_all
 Booking.destroy_all
 User.destroy_all
-
-Piano.create({name: "B1", price: 500, brand: "Korg"})
