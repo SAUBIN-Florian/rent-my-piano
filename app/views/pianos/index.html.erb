@@ -1,6 +1,6 @@
 <div class="index-container">
   <% @pianos.each do |piano| %>
-    <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path piano.photo.key, height: 300, crop: :fill %>')">
+    <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path piano.photo.key, height: 300, crop: :scale %>')">
       <h3> <%= link_to  piano.name, piano_path(piano) %> </h3>
       <p> Brand: <%= piano.brand %> </p>
       <p> Price: <%= piano.price %>$ </p>

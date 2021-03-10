@@ -21,7 +21,7 @@
 <%= link_to "See other pianos", pianos_path(@piano), class:"btn btn-ghost" %>
 </div>
 
-<%= cl_image_tag @article.photo.key, height: 300, width: 400, crop: :fill %>
+<%= cl_image_tag @piano.photo.key, height: 300, width: 400, crop: :fill %>
 
 <div class="bookings-form">
   <%= simple_form_for [@piano, @booking] do |f| %>
