@@ -47,6 +47,6 @@ class PianosController < ApplicationController
   private
 
   def piano_params
-    params.require(:piano).permit(:name, :price, :brand)
+    params.require(:piano).permit(:name, :price, :brand, :photo)
   end
 end
