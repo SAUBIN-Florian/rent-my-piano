@@ -17,6 +17,8 @@ body {
   justify-content: center;
   align-items: center;
 
+  
+
   .post {
     width: 350px;
     height: 500px;
@@ -33,6 +35,13 @@ body {
 
       .body_post {
         height: 50%;
+        
+        .cross {
+          color: black;
+          position: relative;
+          bottom: 100px;
+          right: 16px;
+        }
       }
        
        img {
@@ -83,7 +92,7 @@ body {
         background: rgba(206, 201, 201, 0.548);
         position: relative;
 
-        h1 {
+         h1 {
           font-size: 20px;
           font-weight: bold;
         }
@@ -239,3 +248,4 @@ footer {
      bottom: 0px;
   }
 }
+

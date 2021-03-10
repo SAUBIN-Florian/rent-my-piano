@@ -3,7 +3,7 @@
         <div class="header_post">
             <%= cl_image_tag @piano.photo.key %>
         </div>
-
+      
         <div class="body_post">
             <div class="post_content">
 
@@ -15,19 +15,9 @@
                     <%= link_to "Edit", edit_piano_path(@piano), method: :get, class: "btn btn-ghost" %>
                     <%= link_to "See other pianos", pianos_path(@piano), class:"btn btn-ghost" %>
                 </div>
-
-
-                    <div class="container_tags">
-                        <span>tags</span>
-                        <div class="tags">
-                            <ul>
-                                <li>design</li>
-                                <li>front end</li>
-                            </ul>
-                        </div>
-
-                    </div>
-                </div>
+            </div>
+            <div class="cross">
+              <%= link_to "X", piano_path(@piano), method: :delete %>
             </div>
         </div>
     </div>
