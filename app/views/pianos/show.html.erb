@@ -20,7 +20,7 @@
             </div>
               
               <%= link_to piano_path(@piano), method: :delete do %>
-              <i class="far fa-times-circle"> </i>
+              <i class="far fa-times-circle show-piano-delete"> </i>
               <% end %>
         </div>
     </div>
@@ -29,27 +29,26 @@
 
 <div class="container">
     <div class="post">
-        <div class="header_post">
-            <%= cl_image_tag @piano.photo.key %>
+        <div class="booking-form">
+            <%= simple_form_for [@piano, @booking] do |f| %>
+                <h2>Book your piano</h2>
+                <%= f.date_field :status %>
+                <%= f.submit %>
+            <% end %>
         </div>
       
-        <div class="body_post">
-            <div class="post_content">
+        <div class="booking-field">
             <br>
-
-                <h2><%= @piano.name %></h2>
-                  <p><%= "Price : #{@piano.price} $/day" %></p>
-                  <p><%= "Brand : #{@piano.brand}" %></p>
-
-                <div class="container_infos">
-                    <%= link_to "Edit", edit_piano_path(@piano), method: :get, class: "btn btn-uni" %>
-                    <%= link_to "See other pianos", pianos_path(@piano), class:"btn btn-uni" %>
-                </div>
-            </div>
-              
-              <%= link_to piano_path(@piano), method: :delete do %>
-              <i class="far fa-times-circle"> </i>
-              <% end %>
+            <% @piano.bookings.each do |booking| %>
+                <ul>
+                    <li>
+                        <%= current_user.name %>, reserved <%= @piano.name %> for <%= booking.status %>
+                        <%= link_to booking_path(booking), method: :delete do %>
+                            <i class="far fa-times-circle show-booking-delete"> </i>
+                        <% end %>
+                    </li>
+                </ul>
+            <% end %>
         </div>
     </div>
 </div>
