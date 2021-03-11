@@ -2,9 +2,10 @@
   <%= form_tag pianos_path, method: :get do %>
     <%= text_field_tag :query,
       params[:query],
-      class: "form-control",
+      class: "form-control search-input",
       placeholder: "Type your search here..."
     %>
+
     <%= submit_tag "Search", class: "search-submit" %>
   <% end %>
 </div>
