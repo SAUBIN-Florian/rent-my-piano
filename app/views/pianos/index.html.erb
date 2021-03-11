@@ -1,3 +1,14 @@
+<div class="searchbar">
+  <%= form_tag pianos_path, method: :get do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Type your search here..."
+    %>
+    <%= submit_tag "Search", class: "search-submit" %>
+  <% end %>
+</div>
+
 <div class="index-container">
   <% @pianos.each do |piano| %>
     <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path piano.photo.key, height: 300, crop: :fill %>')">
