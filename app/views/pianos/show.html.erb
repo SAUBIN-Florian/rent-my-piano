@@ -41,7 +41,7 @@
             <% @piano.bookings.each do |booking| %>
                 <ul>
                     <li>
-                        <%= current_user.name %>, reserved <%= @piano.name %> for <%= booking.status %>
+                        <%= booking.user.name %>, reserved <%= @piano.name %> for <%= booking.status %>
                         <%= link_to booking_path(booking), method: :delete do %>
                             <i class="far fa-times-circle show-booking-delete"> </i>
                         <% end %>
