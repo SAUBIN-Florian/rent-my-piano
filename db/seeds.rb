@@ -9,5 +9,6 @@
 
 puts "Cleaning DB"
 
+Piano.destroy_all
 Booking.destroy_all
 User.destroy_all
