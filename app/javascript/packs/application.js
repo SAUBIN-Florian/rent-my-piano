@@ -12,7 +12,6 @@ import "bootstrap";
 
 // internal imports
 import { initMapbox } from '../plugins/init_mapbox';
-console.log("hello")
 document.addEventListener('turbolinks:load', () => {
   initMapbox();
 })

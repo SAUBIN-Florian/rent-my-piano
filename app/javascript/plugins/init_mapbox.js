@@ -24,7 +24,6 @@ const fitMapToMarkers = (map, markers) => {
 };
 
 const initMapbox = () => {
-  console.log("hello")
   const mapElement = document.getElementById('map');
   if (mapElement) {
     
