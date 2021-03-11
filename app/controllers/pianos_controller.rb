@@ -12,11 +12,11 @@ class PianosController < ApplicationController
     @booking = Booking.new
     @bookings = Booking.find_by(id: @piano)
     if @piano.geocoded?   
-      @marker = 
+      @markers = [
         {
           lat: @piano.latitude,
           lng: @piano.longitude
-        }
+        }]
       else
         return "Piano's address not given by the owner"  
       end
