@@ -1,3 +1,32 @@
+<div class="show_1">
+<div class="container left_card">
+    <div class="post">
+        <div class="header_post">
+            <%= cl_image_tag @piano.photo.key %>
+        </div>
+      
+        <div class="body_post">
+            <div class="post_content">
+            <br>
+
+                <h2><%= @piano.name %></h2>
+                  <p><%= "Price : #{@piano.price} $/day" %></p>
+                  <p><%= "Brand : #{@piano.brand}" %></p>
+
+                <div class="container_infos">
+                    <%= link_to "Edit", edit_piano_path(@piano), method: :get, class: "btn btn-uni" %>
+                    <%= link_to "See other pianos", pianos_path(@piano), class:"btn btn-uni" %>
+                </div>
+            </div>
+              
+              <%= link_to piano_path(@piano), method: :delete do %>
+              <i class="far fa-times-circle"> </i>
+              <% end %>
+        </div>
+    </div>
+</div>
+
+
 <div class="container">
     <div class="post">
         <div class="header_post">
@@ -23,4 +52,5 @@
               <% end %>
         </div>
     </div>
+</div>
 </div>
