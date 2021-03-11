@@ -4,7 +4,7 @@
     align-items: center;
     font-size: 24px;
     width: 100%;
-    height: 72px;
+    height: 70px;
     box-shadow: 0 0 6px rgba($color: #000000, $alpha: 1.0);
     img {
         height: 60px;
@@ -23,6 +23,7 @@
     text-decoration: none;
     color: #272727;
     font-size: 20px;
+    transition: all ease-in-out .3s;
     &:hover {
         color: whitesmoke;
         text-shadow: #3b3b3b 1px 0 8px;
