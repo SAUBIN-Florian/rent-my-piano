@@ -60,6 +60,6 @@ class PianosController < ApplicationController
   private
 
   def piano_params
-    params.require(:piano).permit(:name, :price, :brand, :photo, :address)
+    params.require(:piano).permit(:name, :price, :brand, :photo, :address, :latitude, :longitude)
   end
 end
