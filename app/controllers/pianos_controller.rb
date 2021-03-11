@@ -1,6 +1,10 @@
 class PianosController < ApplicationController
   def index
-    @pianos = Piano.all
+    if params[:query].present?
+      @pianos = Piano.search_by_title_and_price_and_brand(params[:query])
+    else
+      @pianos = Piano.all
+    end
   end
 
   def show

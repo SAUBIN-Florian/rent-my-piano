@@ -4,7 +4,7 @@ class Piano < ApplicationRecord
   has_one_attached :photo
 
   include PgSearch::Model
-  pg_search_scope :search_by_title_and_synopsis,
+  pg_search_scope :search_by_title_and_price_and_brand,
     against: [ :name, :price, :brand ],
     using: {
       tsearch: { prefix: true }
