@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;700&display=swap');
+@import "config/bootstrap-variable";
 @import "bootstrap/scss/bootstrap";
 @import "components/navbar";
 @import "components/show";
@@ -10,6 +11,7 @@
 @import "components/new";
 @import "components/sign";
 @import "components/searchbar";
+
 
 * {
     padding: 0;

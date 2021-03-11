@@ -10,13 +10,24 @@ a.btn.btn-homepage {
  }
   }
 
+.btn-uni {
+  margin: 0 auto;
+  color: #313131;
+  background: rgba(black, .1);
+  box-shadow: 0px 0px 0px 1.5px rgba(white ,0.95);
+  border: 1px solid whitesmoke;
+  transition: all ease-in-out .3s;
+  &:hover {
+    background: rgba(black, 0.2);
+    box-shadow: 0px 0px 10px 5px rgba(255,255,255,0.85);
+ }
+}
 .btn-ghost {
   margin: 10px;
   background-color: #f5f4f4;
   border: 1px solid rgba(102, 14, 14, 0.404);
-  color: rgba(102, 14, 14, 0.404);
+  color: rgba(233, 255, 107, 0.856);
   padding: 8px 24px;
-  width: 200px;
   border-radius: 50px;
   font-weight: bolder;
   opacity: 0.6;
@@ -25,6 +36,6 @@ a.btn.btn-homepage {
   .btn-ghost:hover {
     opacity: 1;
     color: rgba(187, 24, 24, 0.424);
-    border-color: rgba(187, 24, 24, 0.404);
+    border-color: rgba(238, 112, 112, 0.404);
   }
 }
