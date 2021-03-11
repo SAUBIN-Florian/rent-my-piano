@@ -1,14 +1,11 @@
-<div class="edit-container">
+<div class="new-container">
 
-<%= simple_form_for(@piano) do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.label :price %>
-  <%= f.number_field :price %>
-  <%= f.label :brand %>
-  <%= f.text_field :brand %>
+<%= simple_form_for @piano do |f| %>
+  <%= f.input :name %>
+  <%= f.input :price %>
+  <%= f.input :brand %>
   <%= f.input :photo, as: :file %>
 
-  <div id="create-btn"><%= f.submit %></div>
+<%= f.submit "Create Piano", class: "btn a.btn.btn-homepage" %>
 <% end %>
 </div>

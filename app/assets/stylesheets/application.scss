@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;700&display=swap');
+@import "config/bootstrap-variable";
 @import "bootstrap/scss/bootstrap";
 @import "components/navbar";
 @import "components/show";
@@ -8,6 +11,7 @@
 @import "components/new";
 @import "components/sign";
 
+
 * {
     padding: 0;
     margin: 0;
@@ -15,4 +19,19 @@
     li{
         list-style: none;
     }
+}
+
+
+h1 {
+    font-family: 'Tangerine', cursive;
+    font-weight: bold;
+    font-size: 88px;
+}
+
+p, a, h2, h3, li, input {
+    font-family: 'Barlow', sans-serif;
+}
+
+.navbar a {
+    font-weight: bold;
 }

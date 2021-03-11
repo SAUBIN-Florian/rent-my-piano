@@ -4,7 +4,7 @@
   <%= f.error_notification %>
   <%= f.full_error :confirmation_token %>
 
-  <div class="form-inputs">
+  <div class="form-inputs sign">
     <%= f.input :email,
                 required: true,
                 autofocus: true,
@@ -12,9 +12,11 @@
                 input_html: { autocomplete: "email" } %>
   </div>
 
-  <div class="form-actions">
+  <div class="form-actions form-btn">
     <%= f.button :submit, "Resend confirmation instructions" %>
   </div>
 <% end %>
 
+<div class="links">
 <%= render "devise/shared/links" %>
+</div>
