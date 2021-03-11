@@ -4,12 +4,15 @@
   margin: 0 auto;
 
   width: 350px;
-  height: 500px;
+  height: 450px;
 
   background: white;                         /* White background */
   padding: 30px;                             /* Internal space */
   border-radius: 4px;
   box-shadow: 0 10px 30px rgba(0,0,0,.1);
-
+  .edit-form {
+    margin-left:40px;
+    margin-right:40px;
+  }
 }
 
