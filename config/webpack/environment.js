@@ -11,3 +11,5 @@ const webpack = require('webpack');
       Popper: ['popper.js', 'default']
     })
   );
+
+module.exports = environment 

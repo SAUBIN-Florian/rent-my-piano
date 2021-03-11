@@ -24,10 +24,12 @@ const fitMapToMarkers = (map, markers) => {
 };
 
 const initMapbox = () => {
+  console.log("hello")
   const mapElement = document.getElementById('map');
   if (mapElement) {
+    
     const map = buildMap(mapElement);
-    console.log("hello")
+    
     const markers = JSON.parse(mapElement.dataset.markers);
     addMarkersToMap(map, markers);
     fitMapToMarkers(map, markers);
