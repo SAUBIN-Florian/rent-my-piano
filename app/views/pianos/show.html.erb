@@ -6,19 +6,18 @@
       
         <div class="body_post">
             <div class="post_content">
+            <br>
 
                 <h2><%= @piano.name %></h2>
-                  <p><%= "Price : #{@piano.price} $" %></p>
+                  <p><%= "Price : #{@piano.price} $/day" %></p>
                   <p><%= "Brand : #{@piano.brand}" %></p>
 
                 <div class="container_infos">
-                    <%= link_to "Edit", edit_piano_path(@piano), method: :get, class: "btn btn-ghost" %>
-                    <%= link_to "See other pianos", pianos_path(@piano), class:"btn btn-ghost" %>
+                    <%= link_to "Edit", edit_piano_path(@piano), method: :get, class: "btn btn-uni" %>
+                    <%= link_to "See other pianos", pianos_path(@piano), class:"btn btn-uni" %>
                 </div>
             </div>
-            <div class="cross">
-              <%= link_to "X", piano_path(@piano), method: :delete %>
-            </div>
+              <i class="far fa-times-circle"></i>
         </div>
     </div>
 </div>
