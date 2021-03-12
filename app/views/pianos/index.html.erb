@@ -9,6 +9,42 @@
     <%= submit_tag "Search", class: "search-submit" %>
   <% end %>
 </div>
+  <button id="myBtn"><i class="fas fa-music"></i></button>
+
+  <div id="myModal" class="modal">
+
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="piano">
+        <div data-note="C" class="key white"></div>
+        <div data-note="Db" class="key black"></div>
+        <div data-note="D" class="key white"></div>
+        <div data-note="Eb" class="key black"></div>
+        <div data-note="E" class="key white"></div>
+        <div data-note="F" class="key white"></div>
+        <div data-note="Gb" class="key black"></div>
+        <div data-note="G" class="key white"></div>
+        <div data-note="Ab" class="key black"></div>
+        <div data-note="A" class="key white"></div>
+        <div data-note="Bb" class="key black"></div>
+        <div data-note="B" class="key white"></div>
+      </div>
+
+      <audio id="C" src="<%= asset_path "notes/C.mp3" %>"></audio>
+      <audio id="Db" src="<%= asset_path "notes/Db.mp3" %>"></audio>
+      <audio id="D" src="<%= asset_path "notes/D.mp3" %>"></audio>
+      <audio id="Eb" src="<%= asset_path "notes/Eb.mp3" %>"></audio>
+      <audio id="E" src="<%= asset_path "notes/E.mp3" %>"></audio>
+      <audio id="F" src="<%= asset_path "notes/F.mp3" %>"></audio>
+      <audio id="Gb" src="<%= asset_path "notes/Gb.mp3" %>"></audio>
+      <audio id="G" src="<%= asset_path "notes/G.mp3" %>"></audio>
+      <audio id="Ab" src="<%= asset_path "notes/Ab.mp3" %>"></audio>
+      <audio id="A" src="<%= asset_path "notes/A.mp3" %>"></audio>
+      <audio id="Bb" src="<%= asset_path "notes/Bb.mp3" %>"></audio>
+      <audio id="B" src="<%= asset_path "notes/B.mp3" %>"></audio>
+    </div>
+
+</div>
 
 <div class="index-container">
   <% @pianos.each do |piano| %>

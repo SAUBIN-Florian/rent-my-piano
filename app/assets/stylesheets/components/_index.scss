@@ -3,7 +3,7 @@
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 16px;
     width: 90%;
-    margin: 50px auto;
+    margin: 30px auto;
   }
 
 .card {
@@ -30,6 +30,8 @@
 
 .card-content p {
     font-size: 18px;
+    font-weight: bold;
+    color: white;
 }
 
 .piano-title-card {
