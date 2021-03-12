@@ -51,9 +51,9 @@
     <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path piano.photo.key, height: 200, width: 400, crop: :fill %>')">
       <div class="card-content">
         <h3> <%= link_to  piano.name, piano_path(piano), class: "piano-title-card" %> </h3>
-        <p> - Brand: <%= piano.brand %> </p>
-        <p> - Price: <%= piano.price %>$/day </p>
-        <p> - Address: <%= piano.address %> </p>
+        <p> Brand: <%= piano.brand %> </p>
+        <p> Price: <%= piano.price %>$/day </p>
+        <p> Address: <%= piano.address %> </p>
       </div>
     </div>
   <% end %>
