@@ -27,8 +27,8 @@ class BookingsController < ApplicationController
 
   def destroy
     @booking = Booking.find(params[:id])
-    @Booking.destroy
-    redirect_to piano_path(@booking)
+    @booking.destroy
+    redirect_to piano_path(@booking.piano)
   end
 
   private
