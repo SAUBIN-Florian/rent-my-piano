@@ -24,19 +24,10 @@ const btn = document.getElementById("myBtn");
 
 const span = document.getElementsByClassName("close")[0];
 
-btn.onclick = function() {
-  modal.style.display = "block";
-}
+btn.addEventListener("click", () => { modal.style.display = "block" })
+span.addEventListener("click", () => { modal.style.display = "none" })
+// window.addEventListener("click", (event) => { modal.style.display = "none" ? (event.target == modal) : modal.style.display = "block" })
 
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
 
 const WHITE_KEYS = ['q', 's', 'd', 'f', 'g', 'h', 'j']
 const BLACK_KEYS = ['a', 'z', 'e', 'r', 't']

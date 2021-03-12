@@ -9,7 +9,7 @@
     <%= submit_tag "Search", class: "search-submit" %>
   <% end %>
 </div>
-  <button id="myBtn" ><i class="fas fa-volume-up"></i></button>
+  <button id="myBtn"><i class="far fa-play-circle"></i></button>
 
   <div id="myModal" class="modal">
 
@@ -30,18 +30,18 @@
         <div data-note="B" class="key white"></div>
       </div>
 
-      <audio id="C" src="app/assets/images/notes/C.mp3"></audio>
-      <audio id="Db" src="app/assets/images/notes/Db.mp3"></audio>
-      <audio id="D" src="app/assets/images/notes/D.mp3"></audio>
-      <audio id="Eb" src="app/assets/images/notes/Eb.mp3"></audio>
-      <audio id="E" src="app/assets/images/notes/E.mp3"></audio>
-      <audio id="F" src="app/assets/images/notes/F.mp3"></audio>
-      <audio id="Gb" src="app/assets/images/notes/Gb.mp3"></audio>
-      <audio id="G" src="app/assets/images/notes/G.mp3"></audio>
-      <audio id="Ab" src="app/assets/images/notes/Ab.mp3"></audio>
-      <audio id="A" src="app/assets/images/notes/A.mp3"></audio>
-      <audio id="Bb" src="app/assets/images/notes/Bb.mp3"></audio>
-      <audio id="B" src="app/assets/images/notes/B.mp3"></audio>
+      <audio id="C" src="<%= asset_path "notes/C.mp3" %>"></audio>
+      <audio id="Db" src="<%= asset_path "notes/Db.mp3" %>"></audio>
+      <audio id="D" src="<%= asset_path "notes/D.mp3" %>"></audio>
+      <audio id="Eb" src="<%= asset_path "notes/Eb.mp3" %>"></audio>
+      <audio id="E" src="<%= asset_path "notes/E.mp3" %>"></audio>
+      <audio id="F" src="<%= asset_path "notes/F.mp3" %>"></audio>
+      <audio id="Gb" src="<%= asset_path "notes/Gb.mp3" %>"></audio>
+      <audio id="G" src="<%= asset_path "notes/G.mp3" %>"></audio>
+      <audio id="Ab" src="<%= asset_path "notes/Ab.mp3" %>"></audio>
+      <audio id="A" src="<%= asset_path "notes/A.mp3" %>"></audio>
+      <audio id="Bb" src="<%= asset_path "notes/Bb.mp3" %>"></audio>
+      <audio id="B" src="<%= asset_path "notes/B.mp3" %>"></audio>
     </div>
 
 </div>
