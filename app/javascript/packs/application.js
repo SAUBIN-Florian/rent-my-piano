@@ -45,14 +45,12 @@ document.addEventListener('keydown', e => {
   const key = e.key
   const whiteKeyIndex = WHITE_KEYS.indexOf(key)
   const blackKeyIndex = BLACK_KEYS.indexOf(key)
-    console.log(key)
   if (whiteKeyIndex > -1) playNote(whiteKeys[whiteKeyIndex])
   if (blackKeyIndex > -1) playNote(blackKeys[blackKeyIndex])
 })
 
 function playNote(key) {
   const noteAudio = document.getElementById(key.dataset.note)
-  console.log(key)
   noteAudio.currentTime = 0
   noteAudio.play()
   key.classList.add('active')
