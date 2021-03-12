@@ -28,7 +28,6 @@
     margin-left: 8px;
   }
 
-
   .post {
     border-radius: 6px;
     width: 400px;
@@ -69,6 +68,10 @@
         height: 80%;
         position: relative;
 
+        .address {
+          font-size: 16px;
+        }
+
         p {
           font-size: 20px;
           font-weight: normal;
@@ -103,6 +106,13 @@
 
 }
 
+
+
+#map {
+  width: 500px;
+  height: 500px;
+}
+
 .booking-form {
 
   height: 40%;
@@ -129,6 +139,4 @@
   margin-left: 10px;
 }
 
-.grid-show {
 
-}
