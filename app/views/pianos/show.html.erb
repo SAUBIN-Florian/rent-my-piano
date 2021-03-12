@@ -7,11 +7,11 @@
       
         <div class="body_post">
             <div class="post_content">
-            <br>
-
                 <h2><%= @piano.name %></h2>
                   <p><%= "Price : #{@piano.price} $/day" %></p>
                   <p><%= "Brand : #{@piano.brand}" %></p>
+                  <div class="address">
+                  <%= "Address : #{@piano.address}" %></div>
 
                 <div class="container_infos">
                     <%= link_to "Edit", edit_piano_path(@piano), method: :get, class: "btn btn-uni" %>
