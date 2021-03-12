@@ -12,3 +12,6 @@ puts "Cleaning DB"
 Piano.destroy_all
 Booking.destroy_all
 User.destroy_all
+
+Piano.create({name: 'B1', price: 50, brand: 'Korg', address: "20 rue des capucins, Lyon", photo: Cloudinary::Uploader.download('v1615379237/7ihmynbdvtpn9livtvf3upe22cnl.jpg')})
+

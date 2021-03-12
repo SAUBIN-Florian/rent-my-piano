@@ -11,6 +11,15 @@ class PianosController < ApplicationController
     @piano = Piano.find(params[:id])
     @booking = Booking.new
     @bookings = Booking.find_by(id: @piano)
+    if @piano.geocoded?   
+      @markers = [
+        {
+          lat: @piano.latitude,
+          lng: @piano.longitude
+        }]
+      else
+        return "Piano's address not given by the owner"  
+      end
   end
 
   def new
@@ -51,6 +60,6 @@ class PianosController < ApplicationController
   private
 
   def piano_params
-    params.require(:piano).permit(:name, :price, :brand, :photo)
+    params.require(:piano).permit(:name, :price, :brand, :photo, :address, :latitude, :longitude)
   end
 end
