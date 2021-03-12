@@ -4,7 +4,7 @@
         <div class="header_post">
             <%= cl_image_tag @piano.photo.key %>
         </div>
-      
+
         <div class="body_post">
             <div class="post_content">
             <br>
@@ -18,7 +18,7 @@
                     <%= link_to "See other pianos", pianos_path(@piano), class:"btn btn-uni" %>
                 </div>
             </div>
-              
+
               <%= link_to piano_path(@piano), method: :delete do %>
               <i class="far fa-times-circle show-piano-delete"> </i>
               <% end %>
@@ -36,7 +36,7 @@
                 <%= f.submit %>
             <% end %>
         </div>
-        <div class="booking-field">
+        <div class="booking-field grid-show">
             <br>
             <% @piano.bookings.each do |booking| %>
                 <ul>
