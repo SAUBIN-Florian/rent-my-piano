@@ -27,7 +27,7 @@
 }
   
 .close:hover, .close:focus {
-    color: black;
+    color: white;
     text-decoration: none;
     cursor: pointer;
 }
@@ -41,8 +41,11 @@
     display: flex;
     align-items: center;
     height: 50px;
-    margin: 0 auto;
+    margin: 10px auto;
     font-size: 48px;
-    background-color: none;
+    background-color: white;
     border: none;
+    &:hover {
+        transform: scale(1.2);
+    }
 }
